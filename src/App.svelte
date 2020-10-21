@@ -1,5 +1,6 @@
 <script>
 	import Data from './Data.svelte';
+	import Ticker from './Ticker.svelte';
 	export let name;
 </script>
 
@@ -7,6 +8,8 @@
 	<h1>Hello {name}!</h1>
 
 	<Data />
+
+	<Ticker />
 </main>
 
 <style>
