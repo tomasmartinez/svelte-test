@@ -1,20 +1,6 @@
 <script>
-	import Api from "./services/Api.js";
 	import Data from './Data.svelte';
 	export let name;
-
-	// const axios = require('axios');
-
-// axios.request({
-//   url: 'https://api.apitalks.store/czso.cz/lide-domy-byty/000190de-41b0-46d4-8ac7-90d0573555c6',
-//   method: 'GET',
-//   headers: {
-//     'x-api-key': 'Ww1jOtU2pK3Qp5VM39GmSKggBEDgYXC14bp1xupf'
-//   }
-// })
-// .then(response => {
-//   console.log(response.data);
-// })
 </script>
 
 <main>
