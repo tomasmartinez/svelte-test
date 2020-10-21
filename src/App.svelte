@@ -1,15 +1,27 @@
 <script>
-	import Data from './Data.svelte';
 	import Ticker from './Ticker.svelte';
-	export let name;
+
+	let pairs = ["BTCEUR", "ETHEUR", "BNBEUR"];
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<h1>Current Crypto Prices</h1>
 
-	<Data />
+	<table class="table is-fullwidth">
+		<thead>
+			<tr>
+				<th>Base</th>
+				<th>Quote</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each pairs as pair}
+			<tr><Ticker symbol={pair}/></tr>
+			{/each}
+		</tbody>
+</table>
 
-	<Ticker />
 </main>
 
 <style>

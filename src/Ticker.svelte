@@ -1,5 +1,5 @@
 <script>
-  let symbol = "BTCEUR";
+  export let symbol;
   let currentPrice = getCurrentPrice();
 
   async function getCurrentPrice() {
@@ -15,12 +15,30 @@
       throw new Error(price);
     }
   }
+
+  function getBase(symbol) {
+    return symbol.slice(0, 3);
+  }
+
+  function getQuote(symbol) {
+    return symbol.slice(3, 6);
+  }
+
+  function formatNumber(n) {
+    return parseFloat(n).toLocaleString(
+      undefined,
+      { minimumFractionDigits: 2,
+        maximumFractionDigits: 2 }
+    );
+  }
 </script>
 
 {#await currentPrice}
   <p>...waiting</p>
 {:then price}
-  <p>{price.symbol} = {price.price}</p>
+  <td>{getBase(price.symbol)}</td>
+  <td>{getQuote(price.symbol)}</td>
+  <td>{formatNumber(price.price)}</td>
 {:catch error}
   <p style="color: red">{error.message}</p>
 {/await}

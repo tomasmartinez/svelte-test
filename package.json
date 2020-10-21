@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
+    "intl": "^1.2.5",
     "sirv-cli": "^1.0.0"
   }
 }
