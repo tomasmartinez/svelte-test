@@ -12,7 +12,7 @@ export const getPokemonList = async () => {
 
 export const getPriceBySymbol = async(symbol) => {
     try {
-      const response = await Api.get(`https://api.binance.com/api/v3/ticker/price?symbol=${name}`);
+      const response = await Api.get(`https://api.binance.com/api/v3/ticker/price?symbol=${symbol}`);
       return response;
     } catch (error) {
       console.error(error);
