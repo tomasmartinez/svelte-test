@@ -1,4 +1,5 @@
 <script>
+	import * as S from 'svelte-materialify';
 	import Ticker from './Ticker.svelte';
 
 	let pairs = ["BTCEUR", "ETHEUR", "BNBEUR"];
@@ -7,7 +8,7 @@
 <main>
 	<h1>Current Crypto Prices</h1>
 
-	<table class="table is-fullwidth">
+	<table>
 		<thead>
 			<tr>
 				<th>Base</th>
