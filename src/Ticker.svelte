@@ -1,4 +1,5 @@
 <script>
+  import * as S from "svelte-materialify";
   export let symbol;
   let currentPrice = getCurrentPrice();
 
